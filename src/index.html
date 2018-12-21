@@ -1,0 +1,14 @@
+<html>
+<body>
+  <script src="./index.js"></script>
+  <script>
+    async function main() {
+      const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
+      const json = await res.json();
+      console.log('json?', json)
+    }
+
+    main();
+  </script>
+</body>
+</html>

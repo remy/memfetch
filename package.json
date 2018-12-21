@@ -1,0 +1,27 @@
+{
+  "name": "dev-fetch",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js",
+    "dist/index.map"
+  ],
+  "scripts": {
+    "build": "parcel build src/index.js"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "keywords": [
+    "fetch",
+    "development",
+    "cache"
+  ],
+  "author": "Remy Sharp",
+  "license": "MIT",
+  "dependencies": {
+    "idb-keyval": "^3.1.0"
+  },
+  "devDependencies": {},
+  "description": "Caches fetch responses and promises for faster development"
+}

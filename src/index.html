@@ -6,9 +6,11 @@
       const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
       const json = await res.json();
       console.log('json?', json)
+      document.querySelector('#code').innerHTML = JSON.stringify(json, 0, 2)
     }
 
     main();
   </script>
+  <pre id="code"></pre>
 </body>
 </html>

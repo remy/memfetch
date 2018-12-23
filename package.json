@@ -1,6 +1,6 @@
 {
   "name": "memfetch",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "main": "dist/index.js",
   "files": [
     "dist/index.js",
@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "parcel build src/index.js",
-    "postpublish": "npm run build"
+    "prepare": "npm run build"
   },
   "browserslist": [
     "last 2 Chrome versions"
@@ -24,5 +24,13 @@
     "idb-keyval": "^3.1.0"
   },
   "devDependencies": {},
-  "description": "Caches fetch responses and promises for faster development"
+  "description": "Caches fetch responses and promises for faster development",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remy/memfetch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/remy/memfetch/issues"
+  },
+  "homepage": "https://github.com/remy/memfetch#readme"
 }

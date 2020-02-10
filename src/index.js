@@ -5,7 +5,7 @@ const store = new Store('memfetch', 'memfetch');
 let allow = '*';
 
 try {
-  allow = document.body.lastChild.src.split('?')[1];
+  allow = document.lastChild.src.split('?')[1];
 } catch (e) {
   //noop
 }

@@ -2,7 +2,15 @@ import { Store, set, get, clear } from 'idb-keyval';
 
 const store = new Store('memfetch', 'memfetch');
 
-export default async function init() {
+let allow = '*';
+
+try {
+  allow = document.body.lastChild.src.split('?')[1];
+} catch (e) {
+  //noop
+}
+
+async function init() {
   const _fetch = window.fetch;
 
   console.warn(
@@ -14,6 +22,10 @@ export default async function init() {
   const createKey = (url, options) => JSON.stringify({ url, options });
 
   const fetch = async (string, options) => {
+    if (allow !== '*' && !string.includes(allow)) {
+      return _fetch(string, options);
+    }
+
     const key = createKey(string, options);
 
     const cached = await get(key, store);

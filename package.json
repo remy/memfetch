@@ -1,6 +1,6 @@
 {
   "name": "memfetch",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "files": [
     "dist/index.js",
@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "parcel build src/index.js",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "dev": "parcel src/index.html"
   },
   "browserslist": [
     "last 2 Chrome versions"

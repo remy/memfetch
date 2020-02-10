@@ -14,6 +14,13 @@ You can include the library via an npm install, or I'd recommend a simple script
 
 As long the script is before your own code, all requests using `fetch` will be cached and served via IndexedDB subsequently.
 
+## Only caching specific URLs
+
+Since memfetch doesn't play nicely with things like Hot Module Reload, you can specify to only allow memfetch to handle matching URLs. To do so, include a string fragment in the query string of the script include. This method (below) will cache any URL that includes `api` in the string:
+
+```html
+<script src="https://unpkg.com/memfetch?api"></script>
+```
 
 ## Clearing / resetting the cache
 
